@@ -5,3 +5,4 @@ def odd_or_even(num)
     puts 'odd'
   end
 end
+
