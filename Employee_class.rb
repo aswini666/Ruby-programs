@@ -1,18 +1,20 @@
 #Employee class
 
 class Employee
-  def initialize(name, id_card, gender, sal = 20000)
+  def initialize(name,gender,salary)
     @name = name
-    @id = id_card
     @gender = gender
-    @sal = sal
+    @salary = salary
   end
 
   def to_s
-    puts "The employee details are :- \n Name : #{@name} \n Id : #{@id} \n Gender : #{@gender}"
+    puts "The Employee details are :- \n Name : #{@name.capitalize!} \n Gender : #{@gender.capitalize!} \n Salary : #{@salary}"
   end
 end
 
- e1 = Employee.new("Siri", 5634234, "Female")
- puts e1.to_s
- 
+puts "Enter the name, gender, salary of the Employee"
+name = gets.chomp
+gender = gets.chomp
+salary = gets.chomp.to_i
+e = Employee.new(name,gender,salary)
+e.to_s
